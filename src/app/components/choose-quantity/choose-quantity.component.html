@@ -1,0 +1,20 @@
+<div class="quantity">
+    <div class="quantity-layout">
+        <p class="choose-type">CHOOSE TYPE</p>
+        <div class="quantity-button">
+            <div (click)="clickEvent('lengthUnit')"
+            [ngClass]="length ? 'active-length' : 'length'">
+                <p>Length</p>
+            </div>
+            <div (click)="clickEvent('tempretureUnit')"
+            [ngClass]="tempreture ? 'active-tempreture' : 'tempreture'">
+                <p>Tempreture</p>
+            </div>
+            <div (click)="clickEvent('volumeUnit')"
+            [ngClass]="volume ? 'active-volume' : 'volume'">
+                <p>Volume</p>
+            </div>
+        </div>
+        <app-conversion></app-conversion>
+    </div>
+</div>

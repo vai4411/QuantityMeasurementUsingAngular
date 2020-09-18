@@ -38,6 +38,8 @@ $inactive-beaker-icon: url("../../../assets/beaker-1.svg");
     width: 29%;
     background-color:#FFFFFF;
     border-radius: 5%;
+    cursor: pointer;
+    box-sizing: border-box;
 }
 
 @mixin  button-heading {
@@ -46,16 +48,53 @@ $inactive-beaker-icon: url("../../../assets/beaker-1.svg");
     text-align: center;
 }
 
+@mixin length-hover {
+    @include buttons();
+    background-image: $active-scale-icon;
+    border:1px solid #0EC098;
+    background-color: #EDFDF9;
+    outline: none;
+    p{
+        @include button-heading();
+        color:#0EC098;
+    }
+}
+
+@mixin  volume-hover {
+    @include buttons();
+    background-image: $active-beaker-icon;
+    border:1px solid #7224FF;
+    background-color: #E8DDFF;
+    outline: none;
+    p{
+        @include button-heading();
+        color:#7224FF;
+    }
+}
+
+@mixin  tempreture-hover {
+    @include buttons();
+    background-image: $active-hot-icon;
+    border:1px solid #FD5160;
+    background-color: #FFEEF0;
+    outline: none;
+    p{
+        @include button-heading();
+        color: #FD5160;
+    }
+}
+
 .length{
     background-image: $inactive-scale-icon;
     @include buttons();
 }
 
-.length:hover,.length:focus{
-    background-image: $active-scale-icon;
-    border:1px solid #0EC098;
-    background-color: #EDFDF9;
-    outline: none;
+.length:hover{
+    @include length-hover();
+}
+
+.active-length{
+    @include length-hover();
 }
 
  .length p{
@@ -63,48 +102,42 @@ $inactive-beaker-icon: url("../../../assets/beaker-1.svg");
     outline: none;
  }
 
- .length:hover p,.length:focus p{
-    color:#0EC098;
-}
+//  .length:hover p,.length:focus p{
+//     color:#0EC098;
+// }
 
 .volume{
     background-image: $inactive-beaker-icon;
     @include buttons();
 }
 
-.volume:hover,.volume:focus{
-    background-image: $active-beaker-icon;
-    border:1px solid #7224FF;
-    background-color: #E8DDFF;
-    outline: none;
+.volume:hover{
+    @include volume-hover();
+}
+
+.active-volume{
+    @include volume-hover();
 }
 
  .volume p{
-     @include button-heading();
-     outline: none;
+    @include button-heading();
+    outline: none;
  }
-
- .volume:hover p,.volume:focus p{
-    color:#7224FF;
-}
 
 .tempreture{
     background-image: $inactive-hot-icon;
     @include buttons();
 }
 
-.tempreture:hover,.tempreture:focus{
-    background-image: $active-hot-icon;
-    border:1px solid #FD5160;
-    background-color: #FFEEF0;
-    outline: none;
+.tempreture:hover{
+    @include tempreture-hover();
+}
+
+.active-tempreture{
+    @include tempreture-hover();
 }
 
  .tempreture p{
-     @include button-heading();
-     outline: none;
+    @include button-heading();
+    outline: none;
  }
-
- .tempreture:hover p,.tempreture:focus p{
-    color:#FD5160;
-}

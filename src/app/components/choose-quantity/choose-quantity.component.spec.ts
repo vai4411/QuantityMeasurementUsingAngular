@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { QuantityButtonComponent } from './quantity-button.component';
+import { ChooseQuantityComponent } from './choose-quantity.component';
 
-describe('QuantityButtonComponent', () => {
-  let component: QuantityButtonComponent;
-  let fixture: ComponentFixture<QuantityButtonComponent>;
+describe('ChooseQuantityComponent', () => {
+  let component: ChooseQuantityComponent;
+  let fixture: ComponentFixture<ChooseQuantityComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ QuantityButtonComponent ]
+      declarations: [ ChooseQuantityComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(QuantityButtonComponent);
+    fixture = TestBed.createComponent(ChooseQuantityComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
