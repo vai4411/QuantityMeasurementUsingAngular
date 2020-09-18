@@ -1,0 +1,60 @@
+.conversion{
+    display: flex;
+    flex-direction: row;
+    padding-top: 8%;
+}
+
+@mixin paragraph {
+    margin-top: 1%;
+    font-weight: bold;
+    font-size: 80%;
+}
+
+@mixin input {
+    height: 70%;
+}
+
+@mixin  input-main {
+    width: 53%;
+}
+
+.input{
+    @include input-main();
+}
+
+.input p{
+    @include paragraph();
+}
+
+.input input{
+    @include input();
+}
+
+.input select{
+    @include input();
+}
+
+.input2{
+    @include input-main();
+    margin-right: -3.8%;
+}
+
+.input2 p{
+    @include paragraph();
+}
+
+.input2 input{
+    @include input();
+}
+
+.input2 select{
+    @include input();
+}
+
+.input-margin{
+    width: 92%;
+    height: 120%;
+    border-color: 1px solid  #F5F6FA;
+    display: flex;
+    flex-direction: column;
+}

@@ -1,0 +1,110 @@
+$active-scale-icon: url('../../../assets/scale.svg');
+$inactive-scale-icon: url('../../../assets/scale-1.svg');
+$active-hot-icon: url("../../../assets/hot-1.svg");
+$inactive-hot-icon: url("../../../assets/hot.svg");
+$active-beaker-icon: url("../../../assets/beaker.svg");
+$inactive-beaker-icon: url("../../../assets/beaker-1.svg");
+
+.quantity{
+    background-color: #F5F6FA;
+    height: 76.5vh;
+    padding-top: 0.3%;
+    margin-right: -0.6%;
+    margin-left: -0.6%;
+}
+
+.quantity-layout{
+    margin-left: 29%;
+    margin-top: 3.8%;
+    width: 42%;
+    height: 70%;
+}
+
+.choose-type{
+    font-weight: 600;
+    font-size: 100%;
+}
+
+.quantity-button{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+@mixin buttons {
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 22vh;
+    width: 29%;
+    background-color:#FFFFFF;
+    border-radius: 5%;
+}
+
+@mixin  button-heading {
+    margin-top: 100px;
+    color:gray;
+    text-align: center;
+}
+
+.length{
+    background-image: $inactive-scale-icon;
+    @include buttons();
+}
+
+.length:hover,.length:focus{
+    background-image: $active-scale-icon;
+    border:1px solid #0EC098;
+    background-color: #EDFDF9;
+    outline: none;
+}
+
+ .length p{
+    @include button-heading();
+    outline: none;
+ }
+
+ .length:hover p,.length:focus p{
+    color:#0EC098;
+}
+
+.volume{
+    background-image: $inactive-beaker-icon;
+    @include buttons();
+}
+
+.volume:hover,.volume:focus{
+    background-image: $active-beaker-icon;
+    border:1px solid #7224FF;
+    background-color: #E8DDFF;
+    outline: none;
+}
+
+ .volume p{
+     @include button-heading();
+     outline: none;
+ }
+
+ .volume:hover p,.volume:focus p{
+    color:#7224FF;
+}
+
+.tempreture{
+    background-image: $inactive-hot-icon;
+    @include buttons();
+}
+
+.tempreture:hover,.tempreture:focus{
+    background-image: $active-hot-icon;
+    border:1px solid #FD5160;
+    background-color: #FFEEF0;
+    outline: none;
+}
+
+ .tempreture p{
+     @include button-heading();
+     outline: none;
+ }
+
+ .tempreture:hover p,.tempreture:focus p{
+    color:#FD5160;
+}
