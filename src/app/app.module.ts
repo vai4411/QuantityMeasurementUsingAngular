@@ -9,6 +9,7 @@ import { ChooseQuantityComponent } from './components/choose-quantity/choose-qua
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { ConversionService } from './conversion.service';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,9 @@ import { ConversionService } from './conversion.service';
     BrowserModule,
     AppRoutingModule,
     CommonModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [ConversionService],
   bootstrap: [AppComponent]

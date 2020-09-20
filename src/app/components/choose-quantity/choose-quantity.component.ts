@@ -12,8 +12,6 @@ export class ChooseQuantityComponent implements OnInit {
   volume:boolean = false;
   subUnit:Array<string> = ['Feet','Inch','Yard','Centimeter'];
 
-  // @Output() getSubUnit: EventEmitter<any> = new EventEmitter();
-
   constructor() { }
 
   ngOnInit(): void {
