@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { ConversionService } from '../../conversion.service';
 
 @Component({
   selector: 'app-conversion',
@@ -10,7 +11,10 @@ export class ConversionComponent implements OnInit {
   firstUnit:string
   secondUnit:string
   quantity:number
-  constructor() { }
+  service:ConversionService
+  constructor(service:ConversionService) {
+    this.service=service;
+  }
 
   ngOnInit(): void {
   }
@@ -27,5 +31,8 @@ export class ConversionComponent implements OnInit {
 
   getValue(quantity:number){
     this.quantity=quantity;
+    this.service.loadConversionData(this.firstUnit,this.secondUnit,this.quantity).subscribe(a=> console.log(a));
   }
+
+
 }

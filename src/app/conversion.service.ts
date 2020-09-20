@@ -1,9 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class ConversionService {
   constructor(private http: HttpClient) { }
   ngOnInit() {
@@ -15,6 +13,7 @@ export class ConversionService {
     quantity: value,
     secondSubUnit: secondUnit,
    }
+   console.log(data);
   return this.http.post("http://localhost:8080/quantity/convert",data);
  }
 }

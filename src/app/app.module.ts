@@ -8,6 +8,7 @@ import { ConversionComponent } from './components/conversion/conversion.componen
 import { ChooseQuantityComponent } from './components/choose-quantity/choose-quantity.component';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
+import { ConversionService } from './conversion.service';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,7 @@ import { HttpClientModule } from '@angular/common/http';
     CommonModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [ConversionService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
