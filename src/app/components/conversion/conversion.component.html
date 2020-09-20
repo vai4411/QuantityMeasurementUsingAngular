@@ -2,15 +2,19 @@
     <div class="input">
         <p>FROM</p>
         <div class="input-margin">
-            <input type="number" name="input1">
-            <select></select>
+            <input type="number">
+            <select matNativeControl required>
+                <option *ngFor="let unit of subUnit">{{unit}}</option>
+              </select>
         </div>
     </div>
     <div class="input2">
         <p>TO</p>
         <div class="input-margin">
             <input type="number" name="input2">
-            <select></select>
+            <select matNativeControl required>
+                <option *ngFor="let unit of subUnit">{{unit}}</option>
+              </select>
         </div>
     </div>
 </div>
