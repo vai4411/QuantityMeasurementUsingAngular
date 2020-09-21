@@ -1,24 +1,24 @@
-<div class="conversion">
-<div class="input">
-    <p>FROM</p>
-    <div class="input-margin">
-        <input type="number" (input)="convert('input1')" [(ngModel)]="value1">
-        <select class="form-control" matNativeControl required (change)="convert('select1')"  [(ngModel)]="selectControl1">
-            <ng-container *ngFor="let unit of subUnit;let indexOfelement=index;">
-                <option >{{unit}}</option>
-            </ng-container>
-        </select>
+<div fxLayout="row wrap" fxLayoutAlign="space-between center">
+    <div class="input">
+        <p>FROM</p>
+        <div class="input-margin">
+            <input type="number" (input)="convert('input1')" [(ngModel)]="value1">
+            <select class="form-control" matNativeControl required (change)="convert('select1')"  [(ngModel)]="selectControl1">
+                <ng-container *ngFor="let unit of subUnit;let indexOfelement=index;">
+                    <option >{{unit}}</option>
+                </ng-container>
+            </select>
+        </div>
     </div>
-</div>
-<div class="input2">
-    <p>TO</p>
-    <div class="input-margin">
-        <input type="number" name="input2" [(ngModel)]="value2" (input)="convert('input2')">
-        <select matNativeControl required (change)="convert('select2')" [(ngModel)]="selectControl2">
-            <ng-container *ngFor="let unit of subUnit;let indexOfelement=index;">
-                <option [selected]="indexOfelement === 1">{{unit}}</option>
-            </ng-container>
-        </select>
+    <div class="input2">
+        <p>TO</p>
+        <div class="input-margin">
+            <input type="number" name="input2" [(ngModel)]="value2" (input)="convert('input2')">
+            <select matNativeControl required (change)="convert('select2')" [(ngModel)]="selectControl2">
+                <ng-container *ngFor="let unit of subUnit;let indexOfelement=index;">
+                    <option [selected]="indexOfelement === 1">{{unit}}</option>
+                </ng-container>
+            </select>
+        </div>
     </div>
-</div>
 </div>

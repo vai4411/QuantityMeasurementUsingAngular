@@ -25,19 +25,11 @@ $inactive-beaker-icon: url("../../../assets/beaker-1.svg");
     font-size: 100%;
 }
 
-.quantity-button{
-    // fxLayout:row;
-    // fxLayoutAlign:space-around center;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
 @mixin buttons {
     background-repeat: no-repeat;
     background-position: 50% 40%;
     height: 22vh;
-    width: 29%;
+    width: 170px;
     background-color:#FFFFFF;
     border-radius: 5%;
     cursor: pointer;
@@ -103,10 +95,6 @@ $inactive-beaker-icon: url("../../../assets/beaker-1.svg");
     @include button-heading();
     outline: none;
  }
-
-//  .length:hover p,.length:focus p{
-//     color:#0EC098;
-// }
 
 .volume{
     background-image: $inactive-beaker-icon;
