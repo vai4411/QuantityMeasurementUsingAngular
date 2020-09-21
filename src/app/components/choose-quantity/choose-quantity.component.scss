@@ -26,6 +26,8 @@ $inactive-beaker-icon: url("../../../assets/beaker-1.svg");
 }
 
 .quantity-button{
+    // fxLayout:row;
+    // fxLayoutAlign:space-around center;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -33,7 +35,7 @@ $inactive-beaker-icon: url("../../../assets/beaker-1.svg");
 
 @mixin buttons {
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: 50% 40%;
     height: 22vh;
     width: 29%;
     background-color:#FFFFFF;

@@ -49,7 +49,5 @@ export class ConversionComponent implements OnInit, OnChanges {
         this.service.loadConversionData(this.selectControl2,this.selectControl1,this.value2).subscribe(a=> this.value1=a['result']);
         break;
     }
-
   }
-
 }
