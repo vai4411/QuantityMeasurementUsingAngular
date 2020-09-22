@@ -8,7 +8,6 @@ import { ConversionComponent } from './components/conversion/conversion.componen
 import { ChooseQuantityComponent } from './components/choose-quantity/choose-quantity.component';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
-import { ConversionService } from './conversion.service';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
@@ -28,7 +27,6 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     ReactiveFormsModule,
     FlexLayoutModule
   ],
-  providers: [ConversionService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -5,8 +5,18 @@ $inactive-hot-icon: url("../../../assets/hot.svg");
 $active-beaker-icon: url("../../../assets/beaker.svg");
 $inactive-beaker-icon: url("../../../assets/beaker-1.svg");
 
+$light-grey: #F5F6FA;
+$white: #FFFFFF;
+$grey: #C9C9C9;
+$green:#0EC098;
+$light-green:#EDFDF9;
+$purple: #7224FF;
+$light-purple:#E8DDFF;
+$red:#FD5160;
+$light-red: #FFEEF0;
+
 .quantity{
-    background-color: #F5F6FA;
+    background-color: $light-grey;
     height: 76.5vh;
     padding-top: 0.3%;
     margin-right: -0.6%;
@@ -30,7 +40,7 @@ $inactive-beaker-icon: url("../../../assets/beaker-1.svg");
     background-position: 50% 40%;
     height: 22vh;
     width: 170px;
-    background-color:#FFFFFF;
+    background-color:$white;
     border-radius: 5%;
     cursor: pointer;
     box-sizing: border-box;
@@ -38,43 +48,44 @@ $inactive-beaker-icon: url("../../../assets/beaker-1.svg");
 
 @mixin  button-heading {
     margin-top: 100px;
-    color:gray;
+    color:$grey;
     text-align: center;
+    font-weight: bolder;
 }
 
 @mixin length-hover {
     @include buttons();
     background-image: $active-scale-icon;
-    border:1px solid #0EC098;
-    background-color: #EDFDF9;
+    border:1px solid $green;
+    background-color:$light-green;
     outline: none;
     p{
         @include button-heading();
-        color:#0EC098;
+        color:$green;
     }
 }
 
 @mixin  volume-hover {
     @include buttons();
     background-image: $active-beaker-icon;
-    border:1px solid #7224FF;
-    background-color: #E8DDFF;
+    border:1px solid $purple;
+    background-color: $light-purple;
     outline: none;
     p{
         @include button-heading();
-        color:#7224FF;
+        color:$purple;
     }
 }
 
 @mixin  tempreture-hover {
     @include buttons();
     background-image: $active-hot-icon;
-    border:1px solid #FD5160;
-    background-color: #FFEEF0;
+    border:1px solid $red;
+    background-color: $light-red;
     outline: none;
     p{
         @include button-heading();
-        color: #FD5160;
+        color:$red;
     }
 }
 

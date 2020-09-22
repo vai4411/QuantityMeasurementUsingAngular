@@ -1,5 +1,5 @@
 import { Component, Input, OnInit ,SimpleChange,OnChanges} from '@angular/core';
-import { ConversionService } from '../../conversion.service';
+import { QuantityService } from './../../service/quantity_service/quantity.service';
 
 @Component({
   selector: 'app-conversion',
@@ -12,10 +12,10 @@ export class ConversionComponent implements OnInit, OnChanges {
   selectControl2="Inch"
   value1:number=0
   value2:number=0
-  service:ConversionService
+  service:QuantityService
 
 
-  constructor(service:ConversionService) {
+  constructor(service:QuantityService) {
     this.service=service;
   }
 
@@ -35,19 +35,16 @@ export class ConversionComponent implements OnInit, OnChanges {
   }
 
   convert(src:string){
+    let data={
+      firstSubUnit: this.selectControl1,
+      quantity: this.value1,
+      secondSubUnit: this.selectControl2,
+     }
     switch (src) {
       case 'input1':
-        this.service.loadConversionData(this.selectControl1,this.selectControl2,this.value1).subscribe(a=> this.value2=a['result']);
+        this.service.quantityConversion(data).subscribe(a=> this.value2=a['result'] );
         break;
-      case 'select1':
-        this.service.loadConversionData(this.selectControl1,this.selectControl2,this.value1).subscribe(a=> this.value2=a['result']);
-        break;
-      case 'input2':
-        this.service.loadConversionData(this.selectControl2,this.selectControl1,this.value2).subscribe(a=> this.value1=a['result']);
-        break;
-      case 'select2':
-        this.service.loadConversionData(this.selectControl2,this.selectControl1,this.value2).subscribe(a=> this.value1=a['result']);
-        break;
+
     }
   }
 }

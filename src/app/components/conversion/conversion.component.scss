@@ -1,3 +1,5 @@
+$grey-border:#E5DAFC;
+
 .conversion{
     display: flex;
     flex-direction: row;
@@ -6,12 +8,36 @@
 
 @mixin paragraph {
     margin-top: 1%;
-    font-weight: bold;
     font-size: 80%;
 }
 
 @mixin input {
     height: 70%;
+    border-style: none;
+    border-top: 1px solid $grey-border;
+    border-left: 1px solid $grey-border;
+    border-right: 1px solid $grey-border;
+}
+
+@mixin  select-unit {
+    display: block;
+    font-size: 14px;
+    font-family: sans-serif;
+    font-weight: 500;
+    padding: 0.6em 9.9em 0.5em 1.9em;
+    max-width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    @include input();
+    border-bottom: 1px solid $grey-border;
+}
+
+@mixin input-value {
+    @include input();
+    padding: 0.1em 0.5em 0em 0.8em;
+    font-size: 34px;
+    font-weight: 600;
+    outline: none;
 }
 
 @mixin  input-main {
@@ -27,12 +53,22 @@
 }
 
 .input input{
-    @include input();
+    @include input-value();
 }
 
 .input select{
-    @include input();
+    @include select-unit();
 }
+
+.input select:focus {
+    border-color: $grey-border;
+    outline: none;
+  }
+.input select option {
+    font-size: 14px;
+    padding: 5%;
+    outline: none;
+  }
 
 .input2{
     @include input-main();
@@ -44,17 +80,16 @@
 }
 
 .input2 input{
-    @include input();
+    @include input-value();
 }
 
 .input2 select{
-        @include input();
+    @include select-unit();
 }
 
 .input-margin{
     width: 92%;
-    height: 120%;
-    border-color: 1px solid  #F5F6FA;
+    height: 110px;
     display: flex;
     flex-direction: column;
 }
