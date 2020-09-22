@@ -10,13 +10,15 @@ import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { HomeComponent } from './components/home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     ConversionComponent,
-    ChooseQuantityComponent
+    ChooseQuantityComponent,
+    HomeComponent
    ],
   imports: [
     BrowserModule,
