@@ -7,8 +7,10 @@ $grey-border:#E5DAFC;
 }
 
 @mixin paragraph {
-    margin-top: 1%;
+    padding-top: 8%;
     font-size: 80%;
+    padding-left: 2%;
+    margin-bottom: 1.5%;
 }
 
 @mixin input {
@@ -40,8 +42,13 @@ $grey-border:#E5DAFC;
     outline: none;
 }
 
-@mixin  input-main {
+@mixin input-main {
     width: 51.8%;
+}
+
+@mixin input-style {
+    -webkit-appearance: none;
+    margin: 0;
 }
 
 .input{
@@ -54,6 +61,11 @@ $grey-border:#E5DAFC;
 
 .input input{
     @include input-value();
+}
+
+.input input::-webkit-outer-spin-button,
+.input input::-webkit-inner-spin-button {
+    @include input-style();
 }
 
 .input select{
@@ -81,6 +93,11 @@ $grey-border:#E5DAFC;
 
 .input2 input{
     @include input-value();
+}
+
+.input2 input::-webkit-outer-spin-button,
+.input2 input::-webkit-inner-spin-button {
+    @include input-style();
 }
 
 .input2 select{

@@ -8,4 +8,16 @@ export class Quantity {
         this.quantity = quantity
         this.secondSubUnit = secondSubUnit
     }
+
+    set setFirstSubUnit(firstSubUnit: string){
+        this.firstSubUnit = firstSubUnit
+    }
+
+    set setQuantity(quantity: number){
+        this.quantity = quantity
+    }
+
+    set setSecondSubUnit(secondSubUnit: string){
+        this.secondSubUnit = secondSubUnit
+    }
 }

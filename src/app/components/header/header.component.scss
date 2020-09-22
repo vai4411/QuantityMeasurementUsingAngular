@@ -1,6 +1,7 @@
 $sky-blue: #446DFF;
 $white: #FFFFFF;
-$welcome-font:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+$welcome-font: Montserrat;
+$heading-font: Poppins;
 
 .welcome{
     display: flex;
@@ -14,9 +15,9 @@ $welcome-font:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 .welcome-heading{
     padding: 1.4%;
     color: $white;
-    font-weight: lighter;
+    font-weight: normal;
     font-family: $welcome-font;
-    margin-left: -12%;
+    margin-left: -13%;
 }
 
 .header{
@@ -29,7 +30,8 @@ $welcome-font:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 .header-quanment{
     font-size: 140%;
     margin-left: 15.5%;
-    font-weight: bolder;
+    font-weight: 600;
+    font-family: $heading-font;
 }
 
 .header-history{
@@ -37,4 +39,5 @@ $welcome-font:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin-right: 12.5%;
     padding-top: 0.6%;
     font-weight: normal;
+    font-family: $heading-font;
 }
