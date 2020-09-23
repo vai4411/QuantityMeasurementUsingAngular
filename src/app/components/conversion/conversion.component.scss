@@ -1,8 +1,6 @@
 $grey-border:#E5DAFC;
 
 .conversion{
-    display: flex;
-    flex-direction: row;
     padding-top: 8%;
 }
 
@@ -43,7 +41,7 @@ $grey-border:#E5DAFC;
 }
 
 @mixin input-main {
-    width: 51.8%;
+    width: 280px;
 }
 
 @mixin input-style {

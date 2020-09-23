@@ -1,10 +1,11 @@
-<div fxLayout="row wrap" fxLayout.xs="column" fxFlex.xs='10' fxLayout.sm="column" fxFlex.sm='104'
-fxLayout.md="column" fxFlex.md='108' fxLayoutAlign="space-between center">
+<div fxLayout="row wrap" fxLayout.xs="column center" fxLayout.sm="column center"
+    fxLayout.md="column center" fxLayoutAlign="space-between center">
     <div class="input">
         <p>FROM</p>
         <div class="input-margin">
             <input type="number" (input)="convert('input1')" [(ngModel)]="value1">
-            <select class="form-control" matNativeControl required (change)="convert('select1')"  [(ngModel)]="selectControl1">
+            <select class="form-control" matNativeControl required (change)="convert('select1')"
+                [(ngModel)]="selectControl1">
                 <ng-container *ngFor="let unit of subUnit;let indexOfelement=index;">
                     <option >{{unit}}</option>
                 </ng-container>

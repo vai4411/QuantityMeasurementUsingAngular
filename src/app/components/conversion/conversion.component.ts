@@ -11,13 +11,13 @@ export class ConversionComponent implements OnInit, OnChanges {
 
   selectControl1="Feet"
   selectControl2="Inch"
-  value1:number=0
-  value2:number=0
-  service:QuantityService
+  value1:number
+  value2:number
+  quantityService:QuantityService
   quantity:Quantity
 
-  constructor(service:QuantityService) {
-    this.service=service;
+  constructor(quantityService:QuantityService) {
+    this.quantityService=quantityService;
   }
 
   ngOnInit(): void {
@@ -26,26 +26,37 @@ export class ConversionComponent implements OnInit, OnChanges {
   @Input() subUnit:[]
 
   ngOnChanges(changes: any) {
-    if(changes.subUnit.previousValue==undefined || changes.subUnit.currentValue.length!=changes.subUnit.previousValue.length)
+    if(changes.subUnit.previousValue==undefined ||
+      changes.subUnit.currentValue.length!=changes.subUnit.previousValue.length)
     {
       this.selectControl1=changes.subUnit.currentValue[0]
       this.selectControl2=changes.subUnit.currentValue[1]
       this.value1=0
       if (changes.subUnit.currentValue.length == 2)
         this.value2=32
-      else
-        this.value2=0
+      else if (changes.subUnit.currentValue.length == 3) {
+        this.value1=1
+        this.value2=0.26
+      }
+      else{
+        this.value1=1
+        this.value2=12
+      }
     }
   }
 
   convert(src:string){
     if( src === 'input1' || src === 'select1'){
       this.quantity = new Quantity(this.selectControl1,this.value1,this.selectControl2);
-      this.service.quantityConversion(this.quantity).subscribe(a=> this.value2=a['result'] );
+      this.quantityService
+      .quantityConversion(this.quantity)
+      .subscribe(response=> this.value2=response['result']);
     }
     else {
       this.quantity = new Quantity(this.selectControl2,this.value2,this.selectControl1);
-        this.service.quantityConversion(this.quantity).subscribe(a=> this.value1=a['result'] );
+        this.quantityService
+        .quantityConversion(this.quantity)
+        .subscribe(response=> this.value1=response['result']);
     }
   }
 }
