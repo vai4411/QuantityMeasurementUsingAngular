@@ -1,7 +1,7 @@
 <div class="quantity">
     <div class="quantity-layout">
         <p class="choose-type">CHOOSE TYPE</p>
-        <div fxLayout="row wrap" fxLayoutAlign="space-between center">
+        <div fxLayout="row wrap" fxLayout.sm="column" fxLayout.md="column" fxLayoutAlign="space-between center">
             <div (click)="clickEvent('lengthUnit')"
             [ngClass]="length ? 'active-length' : 'length'">
                 <p>Length</p>

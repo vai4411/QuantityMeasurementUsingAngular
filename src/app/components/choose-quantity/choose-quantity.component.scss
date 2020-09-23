@@ -5,7 +5,6 @@ $inactive-hot-icon: url("../../../assets/hot.svg");
 $active-beaker-icon: url("../../../assets/beaker.svg");
 $inactive-beaker-icon: url("../../../assets/beaker-1.svg");
 
-$light-grey: #F5F6FA;
 $white: #FFFFFF;
 $grey: #C9C9C9;
 $green:#0EC098;
@@ -16,8 +15,6 @@ $red:#FD5160;
 $light-red: #FFEEF0;
 
 .quantity{
-    background-color: $light-grey;
-    height: 76.5vh;
     padding-top: 0.3%;
     margin-right: -0.6%;
     margin-left: -0.6%;
@@ -38,7 +35,7 @@ $light-red: #FFEEF0;
 @mixin buttons {
     background-repeat: no-repeat;
     background-position: 50% 40%;
-    height: 22vh;
+    height: 138px;
     width: 170px;
     background-color:$white;
     border-radius: 5%;
